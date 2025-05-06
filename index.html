@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belleza Natural</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"> Belleza Natural</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#sobre">Sobre Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <!-- Ícono del carrito con evento -->
+    <div class="cart" onclick="mostrarCarrito()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  
+  <div id="carrito" class="carrito">
+    <h2>Tu Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p id="total-carrito">Total: $0.00</p>
+    <button onclick="cerrarCarrito()">Cerrar</button>
+  </div>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>BELLEZA NATURAL</h1>
+      <p>Productos de belleza naturales perfectos para el cuidado de pieles delicadas </p>
+    </div>
+  </section>
+
+  <section id="productos" class="container">
+    <h2 class="section-title">PRODUCTOS</h2>
+    <div class="products">
+      <div class="product">
+        <img src="im/CREMAH.jpg" alt="Crema Facial" />
+        <div class="product-info">
+          <h3>Crema Hidratante</h3>
+          <p>blanqueadora y reparadora de daños</p>
+          <p class="price">$180 MXN</p>
+          <button onclick="agregarAlCarrito('Crema Hidratante', 180)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/labial.jpg" alt="Labial Mate" />
+        <div class="product-info">
+          <h3>Labial Mate</h3>
+          <p>más de 12 colores disponibles, color intenso de larga duración</p>
+          <p class="price">$120 MXN</p>
+          <button onclick="agregarAlCarrito('Labial Mate', 120)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/mascarillaf.jpg" alt="Mascarilla" />
+        <div class="product-info">
+          <h3>Mascarilla Facial</h3>
+          <p>en crema, experta en el cuidado y eliminador de manchas</p>
+          <p class="price">$150 MXN</p>
+          <button onclick="agregarAlCarrito('Mascarilla Facial', 150)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/toallitas.jpg" alt="Toallitas" />
+        <div class="product-info">
+          <h3>Toallitas Desmaquillantes</h3>
+          <p>de aloe vera y lavanda</p>
+          <p class="price">$75 MXN</p>
+          <button onclick="agregarAlCarrito('Toallitas desmaquillantes', 75)">Agregar al carrito</button>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <img src="im/jabonf.jpg"jabon" />
+        <div class="product-info">
+          <h3>Jabon Facial</h3>
+          <p>liquido de manzanilla</p>
+          <p class="price">$120 MXN</p>
+          <button onclick="agregarAlCarrito('jabon facial', 120)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/blush.jpg" alt="blush" />
+        <div class="product-info">
+          <h3>Blush</h3>
+          <p>hasta 4 tonos diferentes, contiene extracto de aloe vera </p>
+          <p class="price">$96 MXN</p>
+          <button onclick="agregarAlCarrito('blush', 96)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/rimel.jpg" alt="rimel" />
+        <div class="product-info">
+          <h3>Rimel</h3>
+          <p>de aguacate y manzanilla</p>
+          <p class="price">$105 MXN</p>
+          <button onclick="agregarAlCarrito('rimel', 105)">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="im/corrector.jpg" alt="corrector" />
+        <div class="product-info">
+          <h3>Corrector</h3>
+          <p>mas de 10 tonos diferentes con extracto de aloe vera</p>
+          <p class="price">$108 MXN</p>
+          <button onclick="agregarAlCarrito('corrector', 108)">Agregar al carrito</button>
+        </div>
+      </div>
+
+
+
+
+      <div class="product">
+        <img src="im/aceite.jpg" alt="Aceite Esencial" />
+        <div class="product-info">
+          <h3>Aceite de Lavanda</h3>
+          <p>Relajante y natural</p>
+          <p class="price">$95 MXN</p>
+          <button onclick="agregarAlCarrito('Aceite de Lavanda', 95)">Agregar al carrito</button>
+        </div>
+    
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="container">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <div class="about-content">
+      <img src="im/nosotros.jpg" alt="Belleza Natural" class="about-image" />
+      <div class="about-text">
+        <p>
+        En Belleza Natural, creemos que el cuidado personal no debería comprometer tu salud ni el planeta.
+         Somos una marca mexicana comprometida con ofrecer productos de belleza que combinan
+          ingredientes naturales, fórmulas libres de químicos agresivos y una filosofía basada 
+          en el bienestar integral.
+        Nuestro compromiso es acercarte productos eficaces,
+         honestos y respetuosos con tu piel y el medio ambiente. Cada artículo es cuidadosamente
+          seleccionado o elaborado para brindarte una experiencia de cuidado consciente, en armonía con
+           la naturaleza y contigo misma.
+        
+        Creemos en la belleza real, diversa y natural. 
+        Por eso, nuestra misión es inspirar a cada persona a sentirse bien consigo misma,
+         sin filtros, sin estándares imposibles. Solo tú, auténtica, con tu propia esencia.
+        
+        Gracias por acompañarnos en este camino hacia una belleza más limpia, ética y sostenible. 🌿
+    </p>
+</div>
+</div>
+</section>
+
+  </section>
+
+  <section id="contacto" class="container">
+    <h2 class="section-title">Contáctanos</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Belleza Natural - Todos los derechos reservados
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/4422869943" class="whatsapp" target="_blank" title="Contáctanos por WhatsApp">
+    📱
+  </a>
+
+  <!-- Script funcional del carrito -->
+  <script>
+    const carrito = [];
+    let cartCount = 0;
+
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalCarrito = document.getElementById("total-carrito");
+    const carritoDiv = document.getElementById("carrito");
+    const contadorCarrito = document.getElementById("cart-count");
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      cartCount++;
+      contadorCarrito.innerText = cartCount;
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      listaCarrito.innerHTML = "";
+      let total = 0;
+      carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+        listaCarrito.appendChild(li);
+        total += item.precio;
+      });
+      totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    function mostrarCarrito() {
+      carritoDiv.style.display = "block";
+    }
+
+    function cerrarCarrito() {
+      carritoDiv.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
